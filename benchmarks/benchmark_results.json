@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-13T16:43:52.123798",
+    "mode": "simulated",
+    "pytorch_available": false,
+    "num_benchmarks": 7
+  },
+  "results": [
+    {
+      "config": {
+        "name": "Baseline (Single GPU, No Optimizations)",
+        "batch_size": 32,
+        "sequence_length": 512,
+        "hidden_size": 768,
+        "num_layers": 12,
+        "num_gpus": 1,
+        "use_compile": false,
+        "use_fsdp2": false,
+        "use_mixed_precision": false,
+        "gradient_accumulation_steps": 1
+      },
+      "throughput_samples_per_sec": 100.0,
+      "memory_mb": 8000.0,
+      "step_time_ms": 100.0,
+      "speedup_vs_baseline": 1.0,
+      "efficiency_percent": 100.0,
+      "timestamp": "2025-11-13T16:43:52.122903",
+      "mode": "simulated"
+    },
+    {
+      "config": {
+        "name": "+ torch.compile",
+        "batch_size": 32,
+        "sequence_length": 512,
+        "hidden_size": 768,
+        "num_layers": 12,
+        "num_gpus": 1,
+        "use_compile": true,
+        "use_fsdp2": false,
+        "use_mixed_precision": false,
+        "gradient_accumulation_steps": 1
+      },
+      "throughput_samples_per_sec": 140.0,
+      "memory_mb": 8000.0,
+      "step_time_ms": 71.42857142857143,
+      "speedup_vs_baseline": 1.4,
+      "efficiency_percent": 100.0,
+      "timestamp": "2025-11-13T16:43:52.123050",
+      "mode": "simulated"
+    },
+    {
+      "config": {
+        "name": "+ Mixed Precision",
+        "batch_size": 32,
+        "sequence_length": 512,
+        "hidden_size": 768,
+        "num_layers": 12,
+        "num_gpus": 1,
+        "use_compile": false,
+        "use_fsdp2": false,
+        "use_mixed_precision": true,
+        "gradient_accumulation_steps": 1
+      },
+      "throughput_samples_per_sec": 250.0,
+      "memory_mb": 4800.0,
+      "step_time_ms": 40.0,
+      "speedup_vs_baseline": 2.5,
+      "efficiency_percent": 100.0,
+      "timestamp": "2025-11-13T16:43:52.123143",
+      "mode": "simulated"
+    },
+    {
+      "config": {
+        "name": "+ FSDP2",
+        "batch_size": 32,
+        "sequence_length": 512,
+        "hidden_size": 768,
+        "num_layers": 12,
+        "num_gpus": 1,
+        "use_compile": false,
+        "use_fsdp2": true,
+        "use_mixed_precision": false,
+        "gradient_accumulation_steps": 1
+      },
+      "throughput_samples_per_sec": 110.00000000000001,
+      "memory_mb": 7440.0,
+      "step_time_ms": 90.9090909090909,
+      "speedup_vs_baseline": 1.1,
+      "efficiency_percent": 100.0,
+      "timestamp": "2025-11-13T16:43:52.123236",
+      "mode": "simulated"
+    },
+    {
+      "config": {
+        "name": "Full Optimization Stack",
+        "batch_size": 32,
+        "sequence_length": 512,
+        "hidden_size": 768,
+        "num_layers": 12,
+        "num_gpus": 1,
+        "use_compile": true,
+        "use_fsdp2": true,
+        "use_mixed_precision": true,
+        "gradient_accumulation_steps": 1
+      },
+      "throughput_samples_per_sec": 385.0,
+      "memory_mb": 4464.0,
+      "step_time_ms": 25.97402597402597,
+      "speedup_vs_baseline": 3.85,
+      "efficiency_percent": 100.0,
+      "timestamp": "2025-11-13T16:43:52.123324",
+      "mode": "simulated"
+    },
+    {
+      "config": {
+        "name": "Full Stack + 4 GPUs",
+        "batch_size": 32,
+        "sequence_length": 512,
+        "hidden_size": 768,
+        "num_layers": 12,
+        "num_gpus": 4,
+        "use_compile": true,
+        "use_fsdp2": true,
+        "use_mixed_precision": true,
+        "gradient_accumulation_steps": 1
+      },
+      "throughput_samples_per_sec": 1122.66,
+      "memory_mb": 4464.0,
+      "step_time_ms": 8.90741631482372,
+      "speedup_vs_baseline": 11.226600000000001,
+      "efficiency_percent": 280.665,
+      "timestamp": "2025-11-13T16:43:52.123507",
+      "mode": "simulated"
+    },
+    {
+      "config": {
+        "name": "Full Stack + 8 GPUs",
+        "batch_size": 32,
+        "sequence_length": 512,
+        "hidden_size": 768,
+        "num_layers": 12,
+        "num_gpus": 8,
+        "use_compile": true,
+        "use_fsdp2": true,
+        "use_mixed_precision": true,
+        "gradient_accumulation_steps": 1
+      },
+      "throughput_samples_per_sec": 1473.1544520000002,
+      "memory_mb": 4464.0,
+      "step_time_ms": 6.788154484700289,
+      "speedup_vs_baseline": 14.731544520000002,
+      "efficiency_percent": 184.14430650000003,
+      "timestamp": "2025-11-13T16:43:52.123622",
+      "mode": "simulated"
+    }
+  ]
+}
