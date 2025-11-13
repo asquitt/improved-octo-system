@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-11-13T17:05:56.917151",
+    "timestamp": "2025-11-13T17:10:13.540067",
     "mode": "simulated",
     "pytorch_available": false,
     "num_benchmarks": 7
@@ -24,7 +24,7 @@
       "step_time_ms": 100.0,
       "speedup_vs_baseline": 1.0,
       "efficiency_percent": 100.0,
-      "timestamp": "2025-11-13T17:05:56.916189",
+      "timestamp": "2025-11-13T17:10:13.539179",
       "mode": "simulated"
     },
     {
@@ -45,7 +45,7 @@
       "step_time_ms": 71.42857142857143,
       "speedup_vs_baseline": 1.4,
       "efficiency_percent": 100.0,
-      "timestamp": "2025-11-13T17:05:56.916335",
+      "timestamp": "2025-11-13T17:10:13.539287",
       "mode": "simulated"
     },
     {
@@ -66,7 +66,7 @@
       "step_time_ms": 40.0,
       "speedup_vs_baseline": 2.5,
       "efficiency_percent": 100.0,
-      "timestamp": "2025-11-13T17:05:56.916407",
+      "timestamp": "2025-11-13T17:10:13.539368",
       "mode": "simulated"
     },
     {
@@ -87,7 +87,7 @@
       "step_time_ms": 90.9090909090909,
       "speedup_vs_baseline": 1.1,
       "efficiency_percent": 100.0,
-      "timestamp": "2025-11-13T17:05:56.916491",
+      "timestamp": "2025-11-13T17:10:13.539458",
       "mode": "simulated"
     },
     {
@@ -108,7 +108,7 @@
       "step_time_ms": 25.97402597402597,
       "speedup_vs_baseline": 3.85,
       "efficiency_percent": 100.0,
-      "timestamp": "2025-11-13T17:05:56.916615",
+      "timestamp": "2025-11-13T17:10:13.539523",
       "mode": "simulated"
     },
     {
@@ -129,7 +129,7 @@
       "step_time_ms": 8.90741631482372,
       "speedup_vs_baseline": 11.226600000000001,
       "efficiency_percent": 280.665,
-      "timestamp": "2025-11-13T17:05:56.916796",
+      "timestamp": "2025-11-13T17:10:13.539697",
       "mode": "simulated"
     },
     {
@@ -150,7 +150,7 @@
       "step_time_ms": 6.788154484700289,
       "speedup_vs_baseline": 14.731544520000002,
       "efficiency_percent": 184.14430650000003,
-      "timestamp": "2025-11-13T17:05:56.916913",
+      "timestamp": "2025-11-13T17:10:13.539835",
       "mode": "simulated"
     }
   ]
