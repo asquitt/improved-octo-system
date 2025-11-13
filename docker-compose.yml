@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # Distributed training container
+  trainer:
+    build: .
+    image: distributed-training:latest
+    container_name: distributed-trainer
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NCCL_DEBUG=INFO
+    volumes:
+      - ./checkpoints:/workspace/checkpoints
+      - ./data:/workspace/data
+      - ./logs:/workspace/logs
+    working_dir: /workspace
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+
+  # TensorBoard for visualization
+  tensorboard:
+    image: tensorflow/tensorflow:latest
+    container_name: tensorboard
+    ports:
+      - "6006:6006"
+    volumes:
+      - ./logs:/logs
+    command: tensorboard --logdir=/logs --host=0.0.0.0
